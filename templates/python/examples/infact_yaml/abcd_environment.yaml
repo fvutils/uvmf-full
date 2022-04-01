@@ -1,0 +1,25 @@
+uvmf:
+  environments:
+    abcd:
+      agents:
+      - initiator_responder: INITIATOR
+        name: abcd_in
+        type: abcd
+      - initiator_responder: INITIATOR
+        name: abcd_out
+        type: abcd
+      - initiator_responder: INITIATOR
+        name: abcd_ctrl
+        type: abcd
+      - initiator_responder: INITIATOR
+        name: abcd_mm
+        type: abcd
+      analysis_components: []
+      analysis_exports: []
+      analysis_ports: []
+      config_constraints: []
+      config_vars: []
+      parameters: []
+      scoreboards: []
+      subenvs: []
+      tlm_connections: []

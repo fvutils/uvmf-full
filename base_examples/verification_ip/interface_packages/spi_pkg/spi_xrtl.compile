@@ -1,0 +1,10 @@
+incdir:
+  - .
+
+src:
+  - src/spi_if.sv
+  - src/spi_driver_bfm.sv
+  - src/spi_monitor_bfm.sv
+
+needs:
+  - spi_hdl.compile

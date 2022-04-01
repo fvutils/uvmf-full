@@ -1,0 +1,9 @@
+uvmf:
+  benches:
+    abcd:
+      clock_half_period: 5ns
+      clock_phase_offset: 9ns
+      reset_assertion_level: 'False'
+      reset_duration: 200ns
+      top_env: abcd
+      infact_enabled: 'True'

@@ -1,0 +1,14 @@
+{% set fname = "verification_ip/interface_packages/{{name}}_pkg/{{name}}_hvl.compile" %}
+{% block description %}
+{% endblock %}
+{% block contents %}
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg.compile
+incdir:
+  - .
+src:
+  - {{name}}_pkg.sv
+{% for cFile in DPIFiles %}
+  - dpi/{{cFile}}
+{% endfor %}
+{% endblock %}

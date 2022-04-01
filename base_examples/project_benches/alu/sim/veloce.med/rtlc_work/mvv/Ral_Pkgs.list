@@ -1,0 +1,6 @@
+work uvm_pkg
+work uvmf_base_pkg
+work alu_in_pkg_hdl
+work alu_in_pkg
+work alu_out_pkg_hdl
+work alu_out_pkg

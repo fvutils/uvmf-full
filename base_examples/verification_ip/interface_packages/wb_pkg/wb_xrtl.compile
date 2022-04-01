@@ -1,0 +1,10 @@
+incdir:
+  - .
+
+src:
+  - src/wb_if.sv
+  - src/wb_driver_bfm.sv
+  - src/wb_monitor_bfm.sv
+
+needs:
+  - wb_hdl.compile

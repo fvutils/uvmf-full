@@ -1,0 +1,3 @@
+INCLUDE ../../ahb2spi/sim/testlist
+INCLUDE ../../alu/sim/testlist
+INCLUDE ../../gpio_example/sim/testlist

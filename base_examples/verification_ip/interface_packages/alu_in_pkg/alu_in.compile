@@ -1,0 +1,5 @@
+needs:
+  - alu_in_hdl.compile
+  - alu_in_hvl.compile
+  - alu_in_xrtl.compile
+  

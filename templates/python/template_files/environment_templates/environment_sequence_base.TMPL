@@ -1,0 +1,36 @@
+{% set fname = "{{vip_location}}/{{environment_location}}/{{name}}_env_pkg/{{src_dir}}{{name}}_env_sequence_base.svh" %}
+{% extends "base_template.TMPL" %}
+
+{% block description %}
+//----------------------------------------------------------------------
+//                                          
+// DESCRIPTION: This file contains environment level sequences that will
+//    be reused from block to top level simulations.
+//
+//----------------------------------------------------------------------
+{% endblock %}
+
+{% block contents %}
+class {{name}}_env_sequence_base extends uvmf_sequence_base #(uvm_sequence_item);
+
+  `uvm_object_utils( {{name}}_env_sequence_base );
+
+  {% for regModel in regModels %}
+// Handle to the environments register model
+// This handle needs to be set before use.
+  {{regModel.regBlockClass}}  reg_model;
+{% endfor %}
+
+  // pragma uvmf custom class_item_additional begin
+  // pragma uvmf custom class_item_additional end
+  
+  function new(string name = "" );
+    super.new(name);
+  endfunction
+
+endclass
+
+// pragma uvmf custom external begin
+// pragma uvmf custom external end
+
+{% endblock %}

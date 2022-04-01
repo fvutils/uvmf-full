@@ -1,0 +1,73 @@
+uvmf:
+  interfaces:
+    abcd:
+      infact_ready: 'True'
+      clock: paClk
+      config_vars:
+      - isrand: 'False'
+        name: abcd_cfgVar1
+        type: bit
+      - isrand: 'True'
+        name: abcd_cfgVar2
+        type: colors_t
+      - isrand: 'False'
+        name: abcd_cfgVar3
+        type: bit [3:0]
+      hdl_typedefs:
+      - name: my_byte_t
+        type: byte
+      - name: my_word_t
+        type: 'bit [15:0] '
+      - name: colors_t
+        type: enum { red, green, blue, yellow, white, black }
+      hvl_typedefs:
+      - name: my_object_t
+        type: uvm_object
+      parameters:
+      - name: NUM_FILTERS
+        type: int
+        value: '20'
+      - name: NUM_TAPS
+        type: int
+        value: '12'
+      ports:
+      - dir: input
+        name: abcd_wdata
+        width: '8'
+      - dir: input
+        name: abcd_addr
+        width: '16'
+      - dir: output
+        name: abcd_rdata
+        width: '8'
+      reset: paRst
+      reset_assertion_level: 'False'
+      transaction_vars:
+      - iscompare: 'True'
+        isrand: 'True'
+        name: abcd_trnVar1
+        type: my_byte_t
+      - iscompare: 'True'
+        isrand: 'True'
+        name: abcd_trnVar2
+        type: int
+      - iscompare: 'True'
+        isrand: 'True'
+        name: abcd_trnVar3
+        type: bit [15:0]
+      - iscompare: 'True'
+        isrand: 'True'
+        name: abcd_trnVar4
+        type: colors_t
+      - iscompare: 'True'
+        isrand: 'True'
+        name: abcd_trnVar5
+        type: byte
+      - iscompare: 'True'
+        isrand: 'True'
+        name: abcd_trnVar6
+        type: bit [31:0]
+      - iscompare: 'True'
+        isrand: 'True'
+        name: abcd_trnVar7
+        type: integer

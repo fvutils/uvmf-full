@@ -1,0 +1,4 @@
+needs:
+  - wb_hdl.compile
+  - wb_hvl.compile
+  - wb_xrtl.compile
